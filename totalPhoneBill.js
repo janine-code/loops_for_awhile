@@ -18,7 +18,7 @@ var totalPhoneBill = function(num) {
       arrCall.push(split[i]);
 
     }
-
+else{}
   }
 
   var smsTotal = (arrSms.length) * 0.65
@@ -26,17 +26,17 @@ var totalPhoneBill = function(num) {
 
 
   var callTotal = (arrCall.length) * 2.75;
-  console.log(arrCall);
+  //console.log(arrCall);
   //console.log(callTotal);
-  console.callTotal;
-  console.log(smsTotal + callTotal);
-  return smsTotal + callTotal;
+  //console.callTotal;
+  //console.log(smsTotal + callTotal);
+  return "R"+(smsTotal + callTotal);
 
 }
 
 
 
 //console.log(totalPhoneBill("call, sms, call, sms, sms"));
-totalPhoneBill("call, sms, call, sms, sms");
+console.log(totalPhoneBill("call, sms, call, sms, sms"));
 
-//assert.deepEqual(allFromTown('call, sms, call, sms, sms'), "R7.45");
+assert.equal(totalPhoneBill('call, sms, call, sms, sms'), "R7.45");

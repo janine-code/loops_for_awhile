@@ -1,20 +1,16 @@
 var assert = require('assert');
-
-var longestWord = function(sentence){
-  var split = sentence.split(" ");
-  var longestW = 0;
-
-  for(var i = 0; i<split.length; i++){
-
-    if(split[i].length >longestW){
-      longestW=split[i].length;
-      
-
+function longestWord(string) {
+    var splitString = string.split(" ");
+    var maxWordLength = 0;
+    var LongestW = "";
+    for (var i = 0; i < splitString.length; i++) {
+        if (maxWordLength < splitString[i].length) {
+            maxWordLength = splitString[i].length;
+            LongestW = splitString[i];
+        }
     }
-
-
-  }
-
-  return longestW;
+    return LongestW;
 }
-console.log(longestWord("I love trees"));
+console.log(longestWord("Codex-bootcamp is great!"));
+
+assert.equal(longestWord("Codex-bootcamp is great!"),"Codex-bootcamp");

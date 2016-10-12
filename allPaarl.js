@@ -19,4 +19,4 @@ var firstPaarl = function(num){
 
 firstPaarl("CA ry6ryu,CJ 886543,CJ 785333");
 
-//assert.equal(firstPaarl(["CA ry6ryu", "CJ 886543", "CA 785333"]),["CJ 886543"]);
+assert.equal(firstPaarl(["CA ry6ryu", "CJ 886543", "CA 785333"]),["CJ 886543"]);
