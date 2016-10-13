@@ -1,23 +1,18 @@
 const assert = require('assert');
 
-var allFromTown = function(num){
-  var split = num.split(",");
-  var arr = [];
-  var arr2 = [];
-
-      for (var i=0; i < split.length; i++){
-        arr.push(split[i]);
-
-        if(arr[i].startsWith("CA")){
-          arr2.push(arr[i]);
-
-        }
-  else{"no reg number from this town";}
-
-}
-return arr2;
+var allFromTown = function(num) {
+  var splitRegNo = num.split(",");
+  var listRegNumbers = [];
+  var listTownRegNumbers = [];
+  for (var i = 0; i < splitRegNo.length; i++) {
+    listRegNumbers.push(splitRegNo[i]);
+    if (listRegNumbers[i].startsWith("CA")) {
+      listTownRegNumbers.push(listRegNumbers[i]);
+    }
+  }
+  return listTownRegNumbers;
 }
 
 console.log(allFromTown("CA ry6ryu,CJ 886543,CJ 785333"));
-
-assert.deepEqual(allFromTown("CA ry6ryu,CJ 886543,CJ 785333"), ["CA ry6ryu"] );
+console.log(allFromTown("CJ ry6ryu,CJ 886543,CJ 785333"));
+assert.deepEqual(allFromTown("CA ry6ryu,CJ 886543,CJ 785333"), ["CA ry6ryu"]);

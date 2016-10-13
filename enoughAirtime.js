@@ -28,10 +28,5 @@ var enoughAirtime = function(num) {
   return "R"+dataLeft;
 }
 }
-
-
-
-//console.log(totalPhoneBill("call, sms, call, sms, sms"));
 enoughAirtime('call,call,call,data,sms,sms,call,data');
-
 assert.equal(enoughAirtime('call,call,call,data,sms,sms,call,data'),"R16.98")

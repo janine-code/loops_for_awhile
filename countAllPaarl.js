@@ -1,21 +1,18 @@
 const assert = require('assert');
 
 var countAllPaarl = function(num) {
-  var split = num.split(",");
-  var arr = [];
-  var arr2 = [];
-
-  for (var i = 0; i < split.length; i++) {
-    arr.push(split[i]);
-
-    if (arr[i].startsWith("CJ")) {
-      arr2.push(arr[i]);
+  var splitRegNo = num.split(",");
+  var arrNumbers = [];
+  var arrNumbersForCJ = [];
+  for (var i = 0; i < splitRegNo.length; i++) {
+    arrNumbers.push(splitRegNo[i]);
+    if (arrNumbers[i].startsWith("CJ")) {
+      arrNumbersForCJ.push(arrNumbers[i]);
     }
   }
-  return arr2.length;
-
+  return arrNumbersForCJ.length;
 }
 
+console.log(countAllPaarl("CJ ry6ryu,CJ 886543,CJ 785333"));
 console.log(countAllPaarl("CA ry6ryu,CJ 886543,CJ 785333"));
-
 assert.equal(countAllPaarl("CA ry6ryu,CJ 886543,CJ 785333"), 2)
